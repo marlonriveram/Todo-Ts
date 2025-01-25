@@ -9,7 +9,7 @@ const Todo: React.FC<Props> = ({ id, title, completed, onRemoveTodo, onToggleCom
 
     // así se tipa una event, en este caso por que es de chabge y la etiqueta es un inpute
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        onToggleCompleted({
+        onToggleCompleted({ //Invocacion de la funcion
             id,
             completed:event.target.checked // recupera el valor booleano de un checkbox o radio
         })
@@ -37,3 +37,4 @@ const Todo: React.FC<Props> = ({ id, title, completed, onRemoveTodo, onToggleCom
 }
 
 export { Todo }
+

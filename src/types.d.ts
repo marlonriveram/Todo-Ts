@@ -1,3 +1,5 @@
+import { TODO_FILTERS } from "./const"
+
 export interface Todo{
     id: string,
     title: string,
@@ -9,3 +11,6 @@ export type TodoTitle = Pick<Todo,'title'> // // Pick selecciona propiedades esp
 export type TodoCompleted = Pick<Todo,'completed'> // // Pick selecciona propiedades específicas de un tipo}
 
 export type ListOfTodos = Todo[]
+
+
+export type FilterValue = typeof TODO_FILTERS[keyof typeof TODO_FILTERS] // Indexacion de tipos
